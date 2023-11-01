@@ -1,0 +1,222 @@
+div.TaskBoardView-content {
+    height: 100%;
+    flex-grow: 1;
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
+}
+table.TaskBoardView-board {
+    width: calc(100% - 30px);
+    height: 100%;
+    margin: 15px;
+    border: solid 1px var(--main-text-color);
+    border-collapse: collapse;
+}
+table.TaskBoardView-board thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+table.TaskBoardView-board thead th a {
+    color: inherit;
+    text-decoration: none;
+}
+table.TaskBoardView-board th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+}
+table.TaskBoardView-board th {
+    border: solid 1px var(--main-text-color);
+    border-collapse: collapse;
+    padding: 5px;
+}
+table.TaskBoardView-board tr {
+    height: 100%;
+}
+table.TaskBoardView-board td {
+    border: solid 1px var(--main-text-color);
+    border-collapse: collapse;
+    padding: 5px;
+    vertical-align: top;
+    height: 100%;
+}
+.TaskBoardView-sticky-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10px;
+}
+.TaskBoardView-sticky-note {
+    position: relative;
+    display: block;
+    background-color: var(--sticky-yellow-color);
+    filter: drop-shadow(5px 5px 2px var(--sticky-shadow-color));
+    width: 150px;
+    min-height: 80px;
+    height: auto;
+    margin: 5px;
+    padding: 5px;
+    word-wrap: break-word;
+}
+.TaskBoardView-sticky-tags {
+    margin: 2px;
+    padding: 0px;
+    font-size: 85%;
+    line-height: 1.6em;
+}
+.TaskBoardView-sticky-tags li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 5px;
+    padding: 2px;
+    border-radius: 4px;
+    color: var(--sticky-tag-text-color);
+    background-color: var(--sticky-tag-bg-color);
+}
+.TaskBoardView-sticky-barcode {
+    margin: 15px 5px;
+}
+.TaskBoardView-sticky-link {
+    display: block;
+}
+.TaskBoardView-sticky-link .TaskBoardView-sticky-note:hover {
+    filter: drop-shadow(7px 7px 2px var(--sticky-shadow-color));
+    transform: rotate(-3deg);
+}
+table.TaskBoardView-board .TaskBoardView-sticky-note.expired {
+    /* NOTE: this selector should be longer than "per-board customized styles" */
+    background-color: var(--sticky-red-color);
+}
+.TaskBoardView-sticky-note {
+    font-size: 0.85rem;
+}
+.TaskBoardView-sticky-description h1 {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    font-size: 0.95rem;
+}
+.TaskBoardView-sticky-description h2 {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    font-size: 0.925rem;
+}
+.TaskBoardView-sticky-description h3 {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    font-size: 0.9rem;
+}
+.TaskBoardView-sticky-description h4 {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    font-size: 0.875rem;
+}
+.TaskBoardView-sticky-description h5 {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    font-size: 0.875rem;
+}
+.TaskBoardView-sticky-description h6 {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    font-size: 0.85rem;
+}
+.TaskBoardView-sticky-description p {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    font-size: 0.85rem;
+}
+.TaskBoardView-sticky-description a {
+    color: var(--main-text-color);
+}
+.TaskBoardView-sticky-description img {
+    max-width: 100%;
+}
+.TaskBoardView-sticky-description ul {
+    padding-inline-start: 1em;
+    margin-inline-start: 0em;
+    margin-block-start: inherit;
+    margin-block-end: inherit;
+}
+.TaskBoardView-sticky-wrap a.TaskBoardView-sticky-link {
+    color: inherit;
+    text-decoration: none;
+}
+.TaskBoardView-sticky-wrap a.TaskBoardView-sticky-link:hover {
+    cursor: pointer;
+}
+.TaskBoardView-sticky-note .marked {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 95%;
+}
+.TaskBoardView-sticky-note .due-date {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 70%;
+}
+.TaskBoardView-sticky-note.expired .due-date {
+    color: red;
+    font-weight: bold;
+}
+table.TaskBoardView-board thead th:nth-of-type(1) {
+    width: 1px;
+}
+.TaskBoardView-board-note-wrap {
+    font-size: 0.85rem;
+}
+.TaskBoardView-board-note {
+    margin: 10px auto;
+    width: 95%;
+}
+.TaskBoardView-board-note h1 {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    font-size: 0.95rem;
+}
+.TaskBoardView-board-note h2 {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    font-size: 0.925rem;
+}
+.TaskBoardView-board-note h3 {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    font-size: 0.9rem;
+}
+.TaskBoardView-board-note h4 {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    font-size: 0.875rem;
+}
+.TaskBoardView-board-note h5 {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    font-size: 0.875rem;
+}
+.TaskBoardView-board-note h6 {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    font-size: 0.85rem;
+}
+.TaskBoardView-board-note p {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    font-size: 0.85rem;
+}
+.TaskBoardView-board-note a {
+    color: var(--main-text-color);
+}
+.TaskBoardView-board-note img {
+    max-width: 100%;
+}
+.TaskBoardView-board-note ul {
+    padding-inline-start: 1em;
+    margin-inline-start: 0em;
+    margin-block-start: inherit;
+    margin-block-end: inherit;
+}
